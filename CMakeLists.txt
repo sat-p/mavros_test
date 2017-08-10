@@ -6,6 +6,8 @@ add_definitions(-Wall -std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   mavros
   roscpp
+  libmavconn
+  std_msgs
 )
 
 catkin_package(
@@ -18,3 +20,13 @@ catkin_package(
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
+
+if (CATKIN_ENABLE_TESTING)
+
+catkin_add_gtest(mavconn-test src/mavconn-test.cxx)
+target_link_libraries(mavconn-test ${catkin_LIBRARIES})
+
+endif()
+
+add_executable(serial-pixhawk src/serial-pixhawk.cxx)
+target_link_libraries(serial-pixhawk ${catkin_LIBRARIES})
