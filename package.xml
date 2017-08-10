@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>mavros_test</name>
+  <version>0.0.0</version>
+  <description>The mavros_test package</description>
+
+  <maintainer email="prakashsatya10@gmail.com">Satya Panuganti</maintainer>
+
+  <license>TODO</license>
+
+  <author email="prakashsatya10@gmail.com">Satya Panuganti</author> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>mavros</build_depend>
+  <build_depend>roscpp</build_depend>
+  <run_depend>mavros</run_depend>
+  <run_depend>roscpp</run_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
